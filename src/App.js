@@ -1,23 +1,26 @@
 import React from 'react';
-import './App.css';
-
+import PostForm from "./components/PostForm";
+import Post from "./components/Post";
+import FetchedPost from "./components/FetchedPost";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container pt-3">
+        <div className="row">
+            <div className="col">
+                <PostForm />
+            </div>
+        </div>
+        <div className="row">
+            <div className="col">
+                <h2>Синхронные посты</h2>
+                <Post posts={[1, 2, 3]}/>
+            </div>
+            <div className="col">
+                <h2>Асинхронные посты</h2>
+                <FetchedPost posts={[]} />
+            </div>
+        </div>
     </div>
   );
 }
