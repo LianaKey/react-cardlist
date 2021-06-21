@@ -1,17 +1,16 @@
 import React from "react";
 
 export default class PostForm extends React.Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {}
+    state = {
+        quantity: '233453'
     }
 
     render(){
+        console.log(this.quantity)
+
         return(
             <div>
-                <h1>Post form</h1>
+                <h1>Post form {this.quantity}</h1>
             </div>
         )
     }
