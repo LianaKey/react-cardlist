@@ -16,4 +16,4 @@ export default () => {
             {dogData ? <img src={dogData}/> : <p>Click the btn to show dog</p>}
         </div>
     )
-}c
+}
